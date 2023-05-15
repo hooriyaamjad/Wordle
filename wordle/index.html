@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Wordle</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+  </head>
+  <body>
+    <script src="./wordle.js"></script>
+
+    <div class="header-block"> 
+      <div class="wordle-header"> Wordle </div>
+      <div class="sidemenu"> 
+        <button class="darkmode-button" onclick="darkMode(); buttonCol(); blur1()" id="button1">
+          <i class="fa fa-circle-half-stroke"></i>
+        </button>
+        <button class="hint-button" id="button2" onclick="giveHint(); blur2()">
+          <i class="fa fa-circle-question"></i>
+        </button>
+        <button class="info-button" id="button3" onclick="info(); blur3()">
+          <i class="fa fa-circle-info"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="main-block" id="main"> 
+      <div id="image-block" style = "display: none">
+        <img src = "https://res.cloudinary.com/mkf/image/upload/v1675467141/ENSF-381/labs/congrats_fkscna.gif" width = "300">
+      </div>
+      <div class="word-block" id="board"> 
+      </div>
+    </div>
+
+    
+
+    <div id="start-block">
+      <button id="start-button" onclick="startOver(); blurStartOver()">
+        Start Over
+      </button>
+    </div>
+
+    <div id="info">
+      <h3>How to Play</h3>
+      <ul>
+          <li class="info-points">Start Typing. The letters will appear in the boxes.</li>
+          <li class="info-points">Remove letters with backspace.</li>
+          <li class="info-points">Hit enter/return to submit an answer.</li>
+          <li class="info-points">Letters with green background are in the right spot.</li>
+          <li class="info-points">Letters with yellow background exist in the word, but are 
+              in the wrong place.</li>
+          <li class="info-points">Letters with gray background do not exist in the word.</li>
+          <li class="info-points">If you need a hint click the ? icon.</li>
+        </ul> 
+  </div>
+
+    
+    <div id="display-key"></div>
+
+    <div id="hint-block"></div>
+
+    <div class="bottom">
+      Hooriya Amjad 2023
+    </div>
+
+  </body>
+</html>
